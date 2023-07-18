@@ -154,7 +154,7 @@ section {
     width: 350px; /* Adjust the image width for screens up to 1200px */
     height: 600px; /* Adjust the image height for screens up to 1200px */
   }
-}
+} 
 
 @media screen and (max-width: 768px) {
   .image-container {
