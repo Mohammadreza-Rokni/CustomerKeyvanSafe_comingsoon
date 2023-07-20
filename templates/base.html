@@ -20,43 +20,68 @@
     </div>
     
         <hr>
+        <hr>
         <section>
             <div class="image-container">
                 <img src="{% static 'images/clothes.png'%}" alt="Image 1" class="active-image" />
-                <div class="image-text image-text1">Image 1.</div>
+                <div class="image-text image-text1">
+                    <h2 class = "title-text1"> image 1. </h2>
+                    <p class = "des-text1"> this is a test meesage </p>
+                </div>
         
                 <img src="{% static 'images/firefighter.png' %}" alt="Image 2" />
-                <div class="image-text image-text2">Image 2.</div>
+                <div class="image-text image-text2">
+                    <h2 class = "title-text2"> image 2 </h2>
+                    <p class = "des-text2"> this is a test meesage </p>
+                </div>
         
                 <img
                 src="{% static 'images/hat.png' %}"
                 alt="Image 3"
                 />
-                <div class="image-text image-text3">Image 3.</div>
+                <div class="image-text image-text3">
+                    <h2 class = "title-text3"> image 3 </h2>
+                    <p class = "des-text3"> this is a test meesage </p>
+                </div>
         
                 <img src="{% static 'images/Rectangle.png' %}" alt="Image 4" />
-                <div class="image-text image-text4">Image 4.</div>
+                <div class="image-text image-text4">
+                    <h2 class = "title-text4"> image 4 </h2>
+                    <p class = "des-text4"> this is a test meesage </p>
+                </div>
             </div>
         </section>
       
           <script>
             let currentImageIndex = 0;
             const images = document.querySelectorAll(".image-container img");
-            const imageTexts = document.querySelectorAll(".image-text ");
-      
+            const imageTexts = document.querySelectorAll(".image-text");
+
             function showNextImage() {
-              images[currentImageIndex].classList.remove("active-image");
-              imageTexts[currentImageIndex].classList.remove("active-text"); // Removes the "active-text" class from the current text
-              currentImageIndex = (currentImageIndex + 1) % images.length;
-              images[currentImageIndex].classList.add("active-image");
-              imageTexts[currentImageIndex].classList.add("active-text"); // Adds the "active-text" class to the next text
+            images[currentImageIndex].classList.remove("active-image");
+            imageTexts[currentImageIndex].classList.remove("active-text");
+
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+
+            images[currentImageIndex].classList.add("active-image");
+            imageTexts[currentImageIndex].classList.add("active-text");
+
+            images.forEach((image, index) => {
+                if (index === currentImageIndex) {
+                image.classList.add("active-image");
+                image.classList.remove("inactive-image");
+                } else {
+                image.classList.add("inactive-image");
+                image.classList.remove("active-image");
+                }
+            });
             }
-      
+
             function startSlideshow() {
-              showNextImage();
-              setTimeout(startSlideshow, 3000);
+            showNextImage();
+            setTimeout(startSlideshow, 3000);
             }
-      
+
             startSlideshow();
           </script>
         {% block content %} {% endblock %}
@@ -67,11 +92,3 @@
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
-
-<!-- <div class="logo-container">
-    <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo">
-</div> -->
-<!-- <div class="content">
-    <h1 class="display-4">Keyvan Safe</h1>
-    <p class="display-6">Professional PPE Provider</p>
-</div> -->

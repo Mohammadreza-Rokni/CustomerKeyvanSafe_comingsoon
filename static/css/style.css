@@ -1,4 +1,5 @@
-/* main/static/css/style.css */
+/* Common styles for all screen sizes */
+
 body {
   background-color: #ffffff;
 }
@@ -47,130 +48,134 @@ button[type="submit"] {
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
+
 .logo-container {
   flex: auto;
   margin-left: 5px;
 }
+
 .logo {
   max-width: 70%;
   max-height: 70%;
 }
+
 .content {
   flex: 0 0 auto;
   text-align: right;
 }
 
+/* Section with background image */
+
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  margin: 10;
+  height: 100vh;
+  margin: 0; /* Remove unnecessary margin */
   background-color: #f0f0f0;
+  width: 100%; /* Take full width of viewport */
+  overflow: hidden; /* Hide any content overflowing from the section */
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1650px; /* Change this value to make the container wider */
-  position: absolute; /* Set to relative to allow absolute positioning of the text */
-  margin: 0 auto;
+  max-width: 100%; /* Take full width of viewport */
+  position: absolute;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden;
 }
 
 .image-container img {
-  /* Adjustments to make images wider and larger */
-  width: 450px;
-  height: 780px;
-  object-fit: cover;
+  width: 100%; /* Take full width of container */
+  height: 780px; /* Set the desired height */
+  object-fit: cover; /* Maintain aspect ratio without overflowing */
   margin: 0;
   transition: opacity 0.5s, filter 0.5s;
 }
 
 .image-container img.active-image {
-  filter: blur(4px); /* Applies a blur effect to the active image */
-  transform: scale(1.1); /* Increase the size of the active image */
-  z-index: 100;
-  /* Make the active image wider than the other images */
+  filter: blur(3px);
+  transform: scalex(2);
+  filter: brightness(0.3);
 }
+
+.image-container img {
+  transition: all 0.3s ease;
+}
+
+.image-container img:not(.active-image) {
+  filter: none;
+  transform: none;
+}
+
+/* Image texts */
 
 .image-container .image-text1,
 .image-text2,
 .image-text3,
 .image-text4 {
-  position: absolute; /* Absolute position to overlay the text on the image */
+  position: absolute;
   transform: translate(-50%, -50%);
   color: red;
   font-size: 24px;
   font-weight: bold;
-  display: none; /* Hide the text by default */
-  z-index: 101; /* Position the text above the image */
-  width: 10; /* Set the width to 100% to ensure text width matches the image width */
-  text-align: center; /* Center the text horizontally */
+  display: none;
+  z-index: 101;
+  width: 10;
+  text-align: center;
 }
 
 .image-text1 {
   bottom: 50%;
-  left: 13%;
+  left: 16%;
 }
 
 .image-text2 {
   bottom: 50%;
-  left: 38%;
+  left: 36%;
 }
 
 .image-text3 {
   bottom: 50%;
-  left: 63%;
+  left: 62%;
 }
 
 .image-text4 {
   bottom: 50%;
-  left: 87%;
+  left: 85%;
 }
 
 .image-container img.active-image + .image-text1 {
-  display: block; /* Show the text when the image has the "active-image" class (i.e., is blurred) */
+  display: block;
 }
 
 .image-container img.active-image + .image-text2 {
-  display: block; /* Show the text when the image has the "active-image" class (i.e., is blurred) */
+  display: block;
 }
 
 .image-container img.active-image + .image-text3 {
-  display: block; /* Show the text when the image has the "active-image" class (i.e., is blurred) */
+  display: block;
 }
 
 .image-container img.active-image + .image-text4 {
-  display: block; /* Show the text when the image has the "active-image" class (i.e., is blurred) */
+
+  display: block;
 }
 
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 767px) {
   .image-container {
-    max-width: 1000px; /* Adjust the container width for screens up to 1200px */
+    max-width: 100%;
   }
 
   .image-container img {
-    width: 350px; /* Adjust the image width for screens up to 1200px */
-    height: 600px; /* Adjust the image height for screens up to 1200px */
-  }
-} 
-
-@media screen and (max-width: 768px) {
-  .image-container {
-    max-width: 700px; /* Adjust the container width for screens up to 768px */
+    width: 100%;
+    height: auto;
   }
 
-  .image-container img {
-    width: 250px; /* Adjust the image width for screens up to 768px */
-    height: 450px; /* Adjust the image height for screens up to 768px */
-  }
-
-  /* You can add more specific adjustments or hide the overlay text at smaller screen sizes if needed */
-  .image-text1,
-  .image-text2,
-  .image-text3,
-  .image-text4 {
-    display: none;
+  section {
+    height: 100vh;
   }
 }
