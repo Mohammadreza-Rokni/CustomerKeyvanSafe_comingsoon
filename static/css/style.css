@@ -160,8 +160,10 @@ section {
 }
 
 .image-container img.active-image + .image-text4 {
+
   display: block;
 }
+
 
 @media screen and (max-width: 767px) {
   .image-container {
