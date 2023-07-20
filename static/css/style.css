@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Font1";
+  src: url("") format("ttf"),
+    url("/static/fonts/B-Koodak/B\ Koodak\ Bold_0.ttf") format("ttf");
+  /* Add additional formats here if needed (e.g., .ttf, .otf) */
+}
+
+/* Font 2 */
+@font-face {
+  font-family: "Font2";
+  src: url("../fonts/font2.woff2") format("woff2"),
+    url("../fonts/font2.woff") format("woff");
+}
 body {
   background-color: #ffffff;
 }
@@ -16,7 +29,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 10rem;
   color: #333;
 }
 
@@ -143,7 +156,6 @@ section {
 .image-text1 {
   bottom: 3%;
   left: 21%;
-  /* transform: translateX(-50%); */
 }
 
 .image-text2 {
@@ -178,43 +190,90 @@ section {
   display: block;
 }
 
-/* @media screen and (max-width: 1200px) {
-  .image-container {
-    max-width: 100%;
-  }
-
-  .image-container img {
-    width: 100px;
-    height: 700px;
-  }
-
-  section {
-    height: 100vh;
-  }
-} */
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
   .contents {
     flex: 0 0 auto;
-    margin-right: 40px;
-    margin-top: 50px;
+    text-align: center;
+    margin-right: 0;
+    margin-top: 0;
   }
-  h1 {
-    font-size: px;
-    color: #333;
+  .logo-container {
+    width: 80%;
+    height: 40%;
   }
-  image-container {
-    max-width: 100%;
+  .logo {
+    display: block;
+    width: 300px;
+    height: 20%;
+    margin-top: 0;
+    margin-left: 26%;
+  }
+  .display-4 {
+    margin-right: 0;
+    margin-top: 5px;
+    font-size: 2rem;
+    text-align: center;
   }
 
-  .image-container img {
-    width: 100px;
-    height: 700px;
+  .lead {
+    font-size: 1rem;
+    color: #555;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   section {
     height: 100vh;
+  }
+
+  image-container {
+    width: 400px;
+  }
+
+  .image-container img {
+    width: 120px;
+    height: 890px;
+  }
+
+  .image-container img.active-image {
+    filter: blur(3px);
+    transform: scaleX(2);
+    transform-origin: left;
+    filter: brightness(0.3);
+  }
+
+  .title-text1,
+  .title-text2,
+  .title-text3,
+  .title-text4 {
+    font-family: "Font1", sans-serif;
+    font-size: 20px;
+  }
+  .des-text1,
+  .des-text2,
+  .des-text3,
+  .des-text4 {
+    font-size: 10px;
+  }
+
+  .image-text1 {
+    transform: translate(-50%, -50%);
+  }
+  .image-text2 {
+    transform: translate(-50%, -50%);
+  }
+  .image-text3 {
+    transform: translate(-50%, -50%);
+  }
+  .image-text4 {
+    transform: translate(-50%, -50%);
   }
 }
 
