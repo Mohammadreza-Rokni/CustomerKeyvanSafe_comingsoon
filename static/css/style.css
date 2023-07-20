@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +15,7 @@ body {
   flex: 0 0 auto;
   text-align: right;
   margin-right: 40px;
+  margin-top: 50px;
 }
 
 h1 {
@@ -67,11 +69,12 @@ button[type="submit"] {
 /* Section with background image */
 
 section {
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0; /* Remove unnecessary margin */
+
   background-color: #ffffff;
   width: 100%; /* Take full width of viewport */
   overflow: hidden; /* Hide any content overflowing from the section */
@@ -129,7 +132,7 @@ section {
 
 .image-text1 {
   bottom:10%;
-  left: 17%;
+  left: 19%;
 }
 
 .image-text2 {
@@ -144,7 +147,7 @@ section {
 
 .image-text4 {
   bottom: -10%;
-  left: 85%;
+  left: 80%;
 }
 
 .image-container img.active-image + .image-text1 {
@@ -165,18 +168,42 @@ section {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 600px) {
+  .contents {
+    margin-right: 40px;
+    margin-top: 50px;
+  }
+
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
   .image-container {
     max-width: 100%;
   }
-
   .image-container img {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: 450px; 
+
   }
 
+
   section {
-    height: 100vh;
+    height: 55vh;
   }
   .image-container .image-text1,
 .image-text2,
@@ -194,12 +221,12 @@ section {
 }
 
   .image-text1 {
-    bottom:10%;
+    bottom: 10%;
     left: 15%;
   }
   
   .image-text2 {
-    bottom: 50%;
+    bottom: 30%;
     left: 36%;
   }
   
@@ -209,7 +236,9 @@ section {
   }
   
   .image-text4 {
-    bottom: -10%;
-    left: 85%;
+    bottom: -40%;
+    left: 70%;
+    font-size: 2px;
   }
+
 }
