@@ -225,10 +225,10 @@ section {
   }
 
   section {
-    height: 100vh;
+    height: 30vh;
   }
 
-  image-container {
+  .image-container {
 
     width: 100% auto;
   }
@@ -721,4 +721,5 @@ p {
     display: block;
   }
   
+}
 }
