@@ -68,10 +68,12 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
   margin: 0;
   background-color: #ffffff;
   width: 100%;
   overflow: hidden;
+
 }
 
 .image-container {
@@ -143,7 +145,7 @@ section {
 .image-text1 {
   bottom: 3%;
   left: 21%;
-  /* transform: translateX(-50%); */
+
 }
 
 .image-text2 {
@@ -175,23 +177,10 @@ section {
 }
 
 .image-container img.active-image + .image-text4 {
+
   display: block;
 }
 
-/* @media screen and (max-width: 1200px) {
-  .image-container {
-    max-width: 100%;
-  }
-
-  .image-container img {
-    width: 100px;
-    height: 700px;
-  }
-
-  section {
-    height: 100vh;
-  }
-} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -230,6 +219,3 @@ section {
 @media only screen and (min-width: 992px) {
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
