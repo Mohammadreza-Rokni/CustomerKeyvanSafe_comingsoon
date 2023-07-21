@@ -21,7 +21,7 @@
     </div>
         <section>
             <div class="image-container">
-                <img src="{% static 'images/hat.png' %}" alt="Image 1" class="active-image image-1" />
+                <img src="{% static 'images/hat.png' %}" alt="Image 1" class="active-image" />
                 <div class="image-text image-text1">
                     <h2 class = "title-text1">انواع تجهیزات حفاظت فردی و ایمنی</h2>
                     <p></p>
@@ -32,29 +32,30 @@
                     <p class = "des-text1">کفش های ایمنی و اداری </p>
                 </div>
         
-                <img src="{% static 'images/clothes.png'%}" alt="Image 2" class = "image-1"/>
+                <img src="{% static 'images/clothes.png'%}" alt="Image 2" class="active-image"/>
                 <div class="image-text image-text2">
                     <h2 class = "title-text2">انواع لباس های کار و فرم سازمانی</h2>
-                    <p></p>
-                    <p></p>
+                    {% comment %} <p></p>
+                    <p></p> {% endcomment %}
                     <p class = "des-text2">طراحی و دوخت انواع البسه سفارشی و خاص</p>
                 </div>
         
                 <img
                 src="{% static 'images/firefighter.png' %}"
-                alt="Image 3" class = "image-3"
+                alt="Image 3" class="active-image"
                 />
-                <div class="image-text image-text3">
+                <div class="image-text image-text3" class="active-image">
                     <h2 class = "title-text3">انواع تجهیزات آتش نشانی و ماسک های تنفسی</h2>
                     <p></p>
                     <p></p>
-                    <p class = "des-text3">ماسک های تنفسی و شیمیایی و انواع فیلتر ها</p>
+                    <p class = "des-text3">ماسک های تنفسی و شیمیایی و انواع فیلترها</p>
                     <p class = "des-text3">تجهیزات اعلام و اطفاء حریق اتوماتیک و دستی</p>
-                    <p class = "des-text3">انواع خاموش کننده ها و متعلقات سیستم های آتش نشانی</p>
+                    <p class = "des-text3">انواع خاموش کننده ها</p>
+                    <p class = "des-text3">متعلقات سیستم های آتش نشانی</p>
                 </div>
         
                 <img src="{% static 'images/Rectangle.png' %}" alt="Image 4" />
-                <div class="image-text image-text4" class = "image-4">
+                <div class="image-text image-text4">
                     <h2 class = "title-text4">فروش سازمانی</h2>
                     <p></p>
                     <p></p>
