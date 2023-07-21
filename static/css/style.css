@@ -337,14 +337,14 @@ section {
     .title-text2,
     .title-text3,
     .title-text4 {
-      font-family: "Font1", sans-serif;
+
       font-size: 20px;
     }
     .des-text1,
     .des-text2,
     .des-text3,
     .des-text4 {
-      font-family: "Font1", sans-serif;
+
       font-size: 13px;
     }
   
@@ -358,13 +358,13 @@ section {
       display: block;
       position: absolute;
       text-align: right;
-      transform: translate(300px, -100px);
+      transform: translate(290px, -100px);
     }
     .title-text3 {
       display: block;
       position: absolute;
       text-align: right;
-      transform: translate(45px,60px);
+      transform: translate(26px,60px);
     }
     .title-text4 {
       display: block;
@@ -573,68 +573,7 @@ section {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .contents {
-    flex: 0 0 auto;
-    text-align: right;
-    margin-right: 40px;
-    margin-top: 100px;
-  }
-  
-  h1 {
-    font-size: 10rem;
-    color: #333;
-  }
-  
-  p {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 2rem;
-  }
-  
-  form {
-    display: flex;
-    justify-content: center;
-  }
-  
-  input[type="email"] {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  button[type="submit"] {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 0 3px 3px 0;
-    cursor: pointer;
-  }
-  
-  .logo-container {
-    flex: auto;
-    margin-left: 5px;
-  }
-  
-  .logo {
-    max-width: 150%;
-    max-height: 150%;
-  }
-  
-  .content {
-    flex: 0 0 auto;
-    text-align: right;
-  }
-  
+@media only screen and (min-width: 1200px) { 
   section {
     display: flex;
     justify-content: center;
@@ -644,6 +583,10 @@ section {
     background-color: #ffffff;
     width: 100%;
     overflow: hidden;
+  }
+  .logo-container {
+    flex: auto;
+    margin-left: -100px;
   }
   
   .image-container {
@@ -666,7 +609,7 @@ section {
   
   .image-container img.active-image {
     filter: blur(3px);
-    transform: scaleX(2);
+    transform: scaleX(1.5);
     /* transform-origin: right; */
     filter: brightness(0.3);
     /* max-width: 300px; */
